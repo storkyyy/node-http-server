@@ -5,6 +5,7 @@ const fs = require('fs');
 const hostname = 'localhost';
 const port = 3000;
 
+
 const server = http.createServer(
     //request - response
     (req, res) => {
@@ -13,7 +14,6 @@ const server = http.createServer(
         if (req.method === 'GET') {
 
             let fileUrl = req.url;
-
             //if only local host, default to index.html
             if ( fileUrl === '/') {
                 fileUrl = '/index.html';
